@@ -1,0 +1,59 @@
+
+p {
+    text-align: center; /* this will make all paragraphs be in the middle of screen*/
+     margin-left: 25%;
+     margin-right: 25%;
+    }
+ 
+h1 {
+    text-align: center;
+    } /* more centering text, headers */
+ 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;     /* center image and set size */
+    width: auto;
+    height: auto;
+     }
+table, tr, th, td {
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid black; /* center and add border for all the elements in the table*/
+    border-collapse: collapse;
+    padding: 20px;
+        }
+
+button {
+    display: block;
+    margin: auto;
+    padding: 20px;   /*button appears in table */
+        }
+
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center; /*this  allows for the colored header on main page */
+    font-size: 35px;
+    color: white;
+       }
+
+iframe {
+    width: auto;
+    height: auto;
+    margin: auto;
+    overflow: scroll;   /*this sets the size of the youtube videos linked in the individual pages, and allows scrolling*/
+        }
+
+html, body {
+    overflow-y: scroll;
+}
+
+.video iframe {
+    width: 800px;
+    height: 600px;
+    display: flex;              /* this is the class of divs called video and it changes the layout of the youtube videos */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

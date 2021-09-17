@@ -1,0 +1,49 @@
+<!-- 
+File: Watts.html 
+GUI Assignment:  Creating Your First Web Page 
+Karsten Hrasna
+September 15, 2021 at 6:00 PM 
+
+A page focusing on Alan Watts, with some infomrative text and a couple of videos of him
+giving his influential speeches.
+Contains text, and videos, and an image of him.
+ 
+-->
+ 
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+       
+    <body>
+    <h1>Alan Watts</h1> <!-- header, and informative paragraph with a picture of Alan Watts, from wikipedia. Then,
+    a couple of videos. -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Alan_Watts.png/220px-Alan_Watts.png"
+        alt="Alan Watts">
+    <p>Alan Watts was a theologian who brought eastern philosophies to the western world.
+        He talked about how people go about their daily lives, and how Zen buddhism and
+        eastern philosophies can change our perception of the world, which also changes our lives. 
+        Watts also talks about the Ego, which he shows us to be an illusory idea which doesn't actually exist,
+        but it is also something completely necessary. He discusses the union of illusory ego and the physical body,
+        and explains how they are one.
+    </p>
+
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/XBXrrOCTZg8" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>      <!--two youtube videos under the paragraph of Watts talking-->
+
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/2yWx7cqiSJI" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    </body>
+</html>
