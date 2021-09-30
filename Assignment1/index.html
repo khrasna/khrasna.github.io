@@ -1,0 +1,68 @@
+<!-- 
+File: site.html 
+GUI Assignment:  Creating Your First Web Page 
+Karsten Hrasna
+September 12, 2021 at 6:00 PM 
+
+This website will contain a few of my favorite philosophers and influencers. It will contain info on what time they lived,
+what things they talked about, and the people they influenced.
+ 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>GUI Assignment 1</title>
+</head>
+
+<body>
+  <header>Influencers of the World</header>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Era</th>
+      <th>Background</th>
+    </tr>
+    <tr>
+      <td><button onclick="document.location='./Watts.html'">Alan Watts</button></td>
+      <td>6 January 1915 – 16 November 1973</td>
+      <td>Writer, Speaker, Eastern and Western Theology</td>
+      <!--This is a table, and there are three rows.-->
+    </tr>
+    <tr>
+      <td><button onclick="document.location='./Krishnamurti.html'">Jiddu Krishnamurti</button></td>
+      <td>May 11 1895 - February 17, 1986</td>
+      <td>Philosopher, speaker, writer</td>
+      <!--Each row contains their name, which is a clickable button, their birthday, and background-->
+    </tr>
+    <tr>
+      <td><button onclick="document.location='./Laozi.html'">Laozi</button></td>
+      <td>571 BCE - Unknown</td>
+      <td>Philosopher, writer</td>
+    </tr>
+  </table>
+
+  <p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <!--code check badge-->
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+        alt="Valid CSS!" />
+    </a>
+  </p>
+
+  <p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <!--code check badge-->
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+  </p>
+
+
+
+</body>
+
+</html>

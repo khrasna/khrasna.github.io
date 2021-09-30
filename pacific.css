@@ -1,0 +1,114 @@
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+body {
+	background-image: url("ptrbackground.jpg");
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 100%;
+	max-height: 100%;
+	
+}
+
+nav a {
+	text-decoration: none;
+	font-weight: 900;
+	color: rgb(0, 0, 71);
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns: minmax(185px, 12.5%), minmax(115px, 1%), repeat(3, minmax(100px, 28.833%));
+	grid-template-rows: repeat(5, minmax(50px, 20%));
+	grid-row-gap: 0px;
+	grid-column-gap: 0px;
+	max-width:80%;
+	margin: auto;
+}
+
+img {
+	padding-right: 20px;
+	float: left;
+	align-self:auto;
+}
+
+.resort {
+	color: rgba(51, 111, 146, 0.979);
+	font-weight: 700;
+}
+
+nav ul {
+	font-size: 1.0em;
+	padding-left: 20px;
+	list-style-type: none;
+}
+
+nav {
+	
+	grid-column: 1;
+	grid-row: 2 / 10;
+	background-color: lightblue;
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+
+
+header {
+	grid-column: 1 / 10;
+	grid-row: 1 / 2;
+}
+
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+	background-image: url("sunset.jpg");
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+
+#content {
+	grid-column: 2 / 10;
+	grid-row: 2 / 9;
+	background-color: white;
+	list-style-image: url("marker.gif");
+
+}
+
+#content img, h2{
+	padding-left: 20px;
+}
+
+#content ul {
+	padding-left: 20px;
+}
+
+
+
+dt {
+	color: #000033;
+}
+
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	grid-column: 2/10;
+	grid-row: 9/10;
+	background-color: white;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	float: left;
+}
+
