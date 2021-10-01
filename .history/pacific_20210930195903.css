@@ -83,6 +83,7 @@ h2 {
 #content {
 	grid-column: 2 / 10;
 	grid-row: 2 / 9;
+	text-shadow:#000033;
 	background-color: white;
 	list-style-image: url("marker.gif");
 
@@ -103,7 +104,6 @@ dt {
 }
 
 footer {
-	padding-top:20px;
 	font-family: Georgia, "Times New Roman", serif;
 	font-style:italic;
 	grid-column: 2/10;
