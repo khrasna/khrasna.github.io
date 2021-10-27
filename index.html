@@ -13,7 +13,7 @@ By Karsten Hrasna  email Karsten_Hrasna@student.uml.edu-->
     <div id="container">
         <!-- Learned from W3schools. Creates a form which takes number ranges for multiplier and multiplicand. -->
 
-        <form id="FormInput" action="/input.php" method="post" onsubmit="return process()">
+        <form id="FormInput" action="javascript:void(0);" method="get" onsubmit="return process()"> <!--Learned about javascript:void(0) from Dutchie432 at https://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page-->
             <table>
                 <tr>
                     <td class="pad">Multiplier Start: <input input="text" name="Multiplier Start"></td>

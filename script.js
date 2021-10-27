@@ -2,11 +2,18 @@
 //Validate multiplier and multiplicand from FormInput
 function process() {
     var result = true;
+    var multStart = document.forms["FormInput"]["Multiplier Start"].value;
+    var multFinish = document.forms["FormInput"]["Multiplier Finish"].value;
+    var multiplicandStart = document.forms["FormInput"]["Multiplicand Start"].value;
+    var multiplicandFinish = document.forms["FormInput"]["Multiplicand Finish"].value;
+
 
     if (document.getElementById("multTable")) { //remove old table
             var old = document.getElementById("multTable");
             old.remove();
-        };
+    };
+    
+    
     
     //Learned removeChild method from w3schools
     var errors = document.getElementsByClassName("inputError");
@@ -16,25 +23,28 @@ function process() {
         //a user named "Maggyero" at https://stackoverflow.com/questions/23988982/removing-htmlcollection-elements-from-the-dom/23989309
     }
 
-    var multStart = document.forms["FormInput"]["Multiplier Start"].value;
+   
+
+
+    
     if (isNaN(multStart) | multStart < -50 | multStart > 50 | multStart == "") {
         document.getElementById("FormInput").appendChild(createError("Multiplier Start"));  //these next 4 if statements check the validity of the input in the first form
         result = false;
     }
 
-    var multFinish = document.forms["FormInput"]["Multiplier Finish"].value;
+    
     if (isNaN(multFinish) | multFinish < -50 | multFinish > 50 | multFinish == "") {
         document.getElementById("FormInput").appendChild(createError("Multiplier Finish"));  //each one checks the same rules but for different input boxes
-        result = false;
+        result = false;                                                                     //looking for whether the numbers are > 50 or < -50 or not numbers or empty
     }
 
-    var multiplicandStart = document.forms["FormInput"]["Multiplicand Start"].value;
+    
     if (isNaN(multiplicandStart) | multiplicandStart < -50 | multiplicandStart > 50 | multiplicandStart == "") {
         document.getElementById("FormInput").appendChild(createError("Multiplicand Start"));
         result = false;
     }
 
-    var multiplicandFinish = document.forms["FormInput"]["Multiplicand Finish"].value;
+    
     if (isNaN(multiplicandFinish) | multiplicandFinish < -50 | multiplicandFinish > 50 | multiplicandFinish == "") {
         document.getElementById("FormInput").appendChild(createError("Multiplicand Finish"));
         result = false;
@@ -55,6 +65,20 @@ function process() {
         var table = createTable(rows, cols, top, left); //create table based on total rows and cols, and top and left are the sets of multipliers and multiplicands
         table.id = "multTable";
         d.append(table);
+    }
+
+     if (multStart > multFinish) {
+        var p = document.createElement('p');
+        p.innerHTML = "Multiplier start cannot be less than finish.";
+        p.className = "inputError";
+        document.getElementById("FormInput").appendChild(p);    //check to see that the starts are not greater than the finishes
+    }
+
+    if (multiplicandStart > multiplicandFinish) {
+        var p = document.createElement('p');
+        p.innerHTML = "Multiplicand start cannot be less than finish.";
+        p.className = "inputError";
+        document.getElementById("FormInput").appendChild(p);
     }
 }
 
