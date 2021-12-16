@@ -1,0 +1,34 @@
+<!-- HTML file for Assignment 3 
+By Karsten Hrasna  email Karsten_Hrasna@student.uml.edu-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>Input range values for the multiplier and the multiplicand</p>
+    <div id="container">
+        <!-- Learned from W3schools. Creates a form which takes number ranges for multiplier and multiplicand. -->
+
+        <form id="FormInput" action="javascript:void(0);" method="get" onsubmit="return process()"> <!--Learned about javascript:void(0) from Dutchie432 at https://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page-->
+            <table>
+                <tr>
+                    <td class="pad">Multiplier Start: <input input="text" name="Multiplier Start"></td>
+                    <td>Multiplier Finish: <input type="text" name="Multiplier Finish"></td>
+                </tr> 
+                <tr>
+                    <td class="pad">Multiplicand Start: <input type="text" name="Multiplicand Start"></td>
+                    <td>Multiplicand Finish: <input type="text" name="Multiplicand Finish"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit"> <!--goes directly under form and processes the input to create a mult table-->
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

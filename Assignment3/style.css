@@ -1,0 +1,88 @@
+/*Created by Karsten Hrasna. email: Karsten_Hrasna@student.uml.edu*/
+html,
+body {
+    height: 97%;
+    text-align: center;
+}
+
+div#container {
+    display: grid;
+    grid-template-columns: 100%;
+    /* top row of grid holds the form for input, the rest of page holds the multiplication table*/
+    grid-template-rows: minmax(90px, 15%) auto;
+    height: 97%;
+
+}
+
+#multTable {
+    margin: auto;
+    grid-row: 2;
+    border-collapse: collapse;
+    /*the dynamically sized multiplication table */
+    margin-top: 0px;
+    border-bottom: 0px;
+
+}
+
+input[type=submit] {
+    /* submit button under form spaced here */
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#multTable td,
+th {
+    border: solid;
+
+    border-color: black;
+    min-width: 70px;
+    font-size: 30px;
+    height: 70px;
+}
+
+#multTable th {
+    background-color: black;
+    border-right: solid white;
+    border-bottom: solid white;
+    color: white;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    /* get the headers to stay fixed on mult table */
+    width: 100%;
+}
+
+#multTable tr:first-child th:first-child {
+    border: none;
+    background-color: white;
+}
+
+#multTable p.inputError {
+    margin: 0px;
+}
+
+form {
+    grid-row: 1;
+    margin-bottom: 0px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form td {
+    text-align: right;
+    /*line up the input form textboxes*/
+}
+
+form p {
+    margin: 0px;
+}
+
+td.pad {
+    padding-right: 15px;
+}

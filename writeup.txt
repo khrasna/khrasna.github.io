@@ -1,0 +1,2 @@
+I implemented the required features. You can drag and drop, the tiles go back to the tile holder if it misses the scrabble line,
+it figures out if there is a space between the tiles and gives an error, it can be restarted, etc.

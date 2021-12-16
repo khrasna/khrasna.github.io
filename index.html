@@ -1,34 +1,77 @@
-<!-- HTML file for Assignment 3 
-By Karsten Hrasna  email Karsten_Hrasna@student.uml.edu-->
-<!DOCTYPE html>
+<!--Created by Karsten Hrasna, email: Karsten_Hrasna@student.uml.edu-->
 <html>
 
 <head>
-    <title>Multiplication Table</title>
+    <title>Scrabble</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="graphics_data/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 </head>
 
 <body>
-    <p>Input range values for the multiplier and the multiplicand</p>
-    <div id="container">
-        <!-- Learned from W3schools. Creates a form which takes number ranges for multiplier and multiplicand. -->
-
-        <form id="FormInput" action="javascript:void(0);" method="get" onsubmit="return process()"> <!--Learned about javascript:void(0) from Dutchie432 at https://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page-->
-            <table>
-                <tr>
-                    <td class="pad">Multiplier Start: <input input="text" name="Multiplier Start"></td>
-                    <td>Multiplier Finish: <input type="text" name="Multiplier Finish"></td>
-                </tr> 
-                <tr>
-                    <td class="pad">Multiplicand Start: <input type="text" name="Multiplicand Start"></td>
-                    <td>Multiplicand Finish: <input type="text" name="Multiplicand Finish"></td>
-                </tr>
-            </table>
-            <input type="submit" value="Submit"> <!--goes directly under form and processes the input to create a mult table-->
-        </form>
+    <div id="container" class="droppable">
+        <!--holds the scrabble line-->
     </div>
 
-    <script src="script.js"></script>
+    <div id="tileHolder">
+        <!--holds tiles-->
+        <img src="graphics_data/scrabble-tile-holder-406774_640.png" id="holder" width='25%'>
+        <div id="tiles" class="droppable">
+
+        </div>
+
+        <input type="submit" value="Submit" name="Submit">
+        <!--submit racks up points, restart resets everything-->
+        <input type="button" value="Restart" name="Restart">
+
+    </div>
+    <p id="remainder"></p>
+    <p id="word"></p>
+    <p id="score">Score: </p>
+    <!--output and tiles remaining-->
+    <div id="stats">
+
+        <ul>
+            <li id="A"></li>
+            <li id="B"></li>
+            <li id="C"></li>
+            <li id="D"></li>
+            <li id="E"></li>
+            <li id="F"></li>
+            <li id="G"></li>
+            <li id="H"></li>
+            <li id="I"></li>
+        </ul>
+        <ul>
+            <li id="J"></li>
+            <li id="K"></li>
+            <li id="L"></li>
+            <li id="M"></li>
+            <li id="N"></li>
+            <li id="O"></li>
+            <li id="P"></li>
+            <li id="Q"></li>
+            <li id="R"></li>
+        </ul>
+        <ul>
+            <li id="S"></li>
+            <li id="T"></li>
+            <li id="U"></li>
+            <li id="V"></li>
+            <li id="W"></li>
+            <li id="X"></li>
+            <li id="Y"></li>
+            <li id="Z"></li>
+            <li id="_"></li>
+        </ul>
+    </div>
+
+
 </body>
 
 </html>

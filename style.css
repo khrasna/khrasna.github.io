@@ -1,88 +1,78 @@
-/*Created by Karsten Hrasna. email: Karsten_Hrasna@student.uml.edu*/
-html,
+/*Created by Karsten Hrasna, email: Karsten_Hrasna@student.uml.edu*/
 body {
-    height: 97%;
     text-align: center;
 }
 
-div#container {
-    display: grid;
-    grid-template-columns: 100%;
-    /* top row of grid holds the form for input, the rest of page holds the multiplication table*/
-    grid-template-rows: minmax(90px, 15%) auto;
-    height: 97%;
-
+#container {
+    display: table;
+    position: relative;
+    width: 70%;
+    height: 10%;
+    float: left;
+    margin-left: 15%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
-#multTable {
-    margin: auto;
-    grid-row: 2;
-    border-collapse: collapse;
-    /*the dynamically sized multiplication table */
-    margin-top: 0px;
-    border-bottom: 0px;
-
+#stats {
+    text-align: center;
+    align-content: center;
+    height: 60%;
 }
 
-input[type=submit] {
-    /* submit button under form spaced here */
-    margin-top: 10px;
-    margin-bottom: 0px;
+ul {
+    float: left;
+    font-size: 110%;
+    padding-left: 17%;
 }
 
-#multTable td,
-th {
-    border: solid;
-
-    border-color: black;
-    min-width: 70px;
-    font-size: 30px;
-    height: 70px;
-}
-
-#multTable th {
-    background-color: black;
-    border-right: solid white;
-    border-bottom: solid white;
-    color: white;
+li {
+    border: 1px solid black;
 }
 
 
-.sticky {
-    position: fixed;
-    top: 0px;
-    /* get the headers to stay fixed on mult table */
-    width: 100%;
+
+#tileHolder {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 50%;
+
 }
 
-#multTable tr:first-child th:first-child {
-    border: none;
-    background-color: white;
-}
-
-#multTable p.inputError {
-    margin: 0px;
-}
-
-form {
-    grid-row: 1;
-    margin-bottom: 0px;
+#holder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
+    border-collapse: collapse;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+
 }
 
-form td {
-    text-align: right;
-    /*line up the input form textboxes*/
+#remainder,
+#score,
+#word {
+    display: inline;
+    padding-left: 5%;
+    font-size: 150%;
 }
 
-form p {
-    margin: 0px;
+#container p {
+    font-size: 80%;
 }
 
-td.pad {
-    padding-right: 15px;
+td {
+    border: 1px solid black;
+    text-align: center;
+
 }
